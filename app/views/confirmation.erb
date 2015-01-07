@@ -1,0 +1,14 @@
+Here is a preview of your email
+
+<p>Recipients: <%= @mailer.recipients %></p>
+<p>From: <%= @mailer.from %></p>
+<p>Subject: <%= @mailer.subject %></p>
+<p>Body: <%= @parsed_message %></p>
+
+<form action='/send_email' method='post'>
+  <input type='hidden' name='Recipients' value='<%= @mailer.recipients %>'>
+  <input type='hidden' name='From' value='<%= @mailer.from %>'>
+  <input type='hidden' name='Subject' value='<%= @mailer.subject %>'>
+  <input type='hidden' name='Body' value='<%= @mailer.body %>'>
+  <input type='submit' value='Send email'>
+</form>
